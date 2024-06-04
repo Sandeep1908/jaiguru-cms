@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "short_chains",
+  "info": {
+    "singularName": "short-chain",
+    "pluralName": "short-chains",
+    "displayName": "short-chain"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
