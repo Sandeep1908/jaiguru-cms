@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "long_chains",
+  "info": {
+    "singularName": "long-chain",
+    "pluralName": "long-chains",
+    "displayName": "long-chain"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

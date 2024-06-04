@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "harams",
+  "info": {
+    "singularName": "haram",
+    "pluralName": "harams",
+    "displayName": "Haram"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

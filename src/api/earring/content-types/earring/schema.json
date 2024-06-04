@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "earrings",
+  "info": {
+    "singularName": "earring",
+    "pluralName": "earrings",
+    "displayName": "Earring",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

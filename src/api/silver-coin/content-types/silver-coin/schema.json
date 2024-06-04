@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "silver_coins",
+  "info": {
+    "singularName": "silver-coin",
+    "pluralName": "silver-coins",
+    "displayName": "silver-coin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

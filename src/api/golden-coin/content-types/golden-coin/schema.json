@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "golden_coins",
+  "info": {
+    "singularName": "golden-coin",
+    "pluralName": "golden-coins",
+    "displayName": "Golden-Coin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
