@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bangle",
     "pluralName": "bangles",
-    "displayName": "Bangle"
+    "displayName": "Bangle",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,14 +19,15 @@
       "type": "string"
     },
     "images": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
