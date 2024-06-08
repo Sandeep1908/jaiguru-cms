@@ -821,6 +821,51 @@ export interface ApiBangleBangle extends Schema.CollectionType {
   };
 }
 
+export interface ApiBannerBanner extends Schema.CollectionType {
+  collectionName: 'banners';
+  info: {
+    singularName: 'banner';
+    pluralName: 'banners';
+    displayName: 'banner';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    homebanners: Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    bangle: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    earring: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    goldencoin: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    haram: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    longchain: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    nechwear: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    pendant: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    ring: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    shortchain: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    silvercoin: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    thalichain: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    vanki: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::banner.banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::banner.banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiEarringEarring extends Schema.CollectionType {
   collectionName: 'earrings';
   info: {
@@ -1187,6 +1232,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::bangle.bangle': ApiBangleBangle;
+      'api::banner.banner': ApiBannerBanner;
       'api::earring.earring': ApiEarringEarring;
       'api::golden-coin.golden-coin': ApiGoldenCoinGoldenCoin;
       'api::haram.haram': ApiHaramHaram;
