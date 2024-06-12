@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "gramrates",
+  "info": {
+    "singularName": "gramrate",
+    "pluralName": "gramrates",
+    "displayName": "gramrate"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "gold24kt": {
+      "type": "string"
+    },
+    "gold22kt": {
+      "type": "string"
+    },
+    "gold18kt": {
+      "type": "string"
+    },
+    "silver": {
+      "type": "string"
+    }
+  }
+}

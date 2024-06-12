@@ -827,6 +827,7 @@ export interface ApiBannerBanner extends Schema.CollectionType {
     singularName: 'banner';
     pluralName: 'banners';
     displayName: 'banner';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -848,6 +849,7 @@ export interface ApiBannerBanner extends Schema.CollectionType {
     silvercoin: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     thalichain: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     vanki: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    mobilehome: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -924,6 +926,39 @@ export interface ApiGoldenCoinGoldenCoin extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::golden-coin.golden-coin',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiGramrateGramrate extends Schema.SingleType {
+  collectionName: 'gramrates';
+  info: {
+    singularName: 'gramrate';
+    pluralName: 'gramrates';
+    displayName: 'gramrate';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    gold24kt: Attribute.String;
+    gold22kt: Attribute.String;
+    gold18kt: Attribute.String;
+    silver: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::gramrate.gramrate',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::gramrate.gramrate',
       'oneToOne',
       'admin::user'
     > &
@@ -1235,6 +1270,7 @@ declare module '@strapi/types' {
       'api::banner.banner': ApiBannerBanner;
       'api::earring.earring': ApiEarringEarring;
       'api::golden-coin.golden-coin': ApiGoldenCoinGoldenCoin;
+      'api::gramrate.gramrate': ApiGramrateGramrate;
       'api::haram.haram': ApiHaramHaram;
       'api::long-chain.long-chain': ApiLongChainLongChain;
       'api::neckwear.neckwear': ApiNeckwearNeckwear;
