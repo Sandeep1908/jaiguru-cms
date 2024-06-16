@@ -933,12 +933,13 @@ export interface ApiGoldenCoinGoldenCoin extends Schema.CollectionType {
   };
 }
 
-export interface ApiGramrateGramrate extends Schema.SingleType {
+export interface ApiGramrateGramrate extends Schema.CollectionType {
   collectionName: 'gramrates';
   info: {
     singularName: 'gramrate';
     pluralName: 'gramrates';
     displayName: 'gramrate';
+    description: '';
   };
   options: {
     draftAndPublish: true;

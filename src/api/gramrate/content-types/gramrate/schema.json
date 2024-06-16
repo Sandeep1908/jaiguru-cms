@@ -1,10 +1,11 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "gramrates",
   "info": {
     "singularName": "gramrate",
     "pluralName": "gramrates",
-    "displayName": "gramrate"
+    "displayName": "gramrate",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
